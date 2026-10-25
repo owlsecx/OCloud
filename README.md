@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Cloud Evidence Collector
+OCloud is a cloud-evidence collector for digital forensics that parses exports from consumer cloud services. It analyses Google Takeout archives and iCloud backups, extracts EXIF metadata from photo folders, builds location timelines and enumerates linked devices. Parsed evidence, including WhatsApp chat exports, can be saved to a JSON report or exported as KML.
 
 ---
 
 ## ✨ Features
 
-- Cloud forensics — Takeout, iCloud, EXIF, WhatsApp, KML timelines
+- Google Takeout ZIP analysis
+- iCloud backup folder analysis
+- EXIF metadata extraction from image folders
+- Location timeline building and KML export
+- WhatsApp chat-export parsing and linked-device enumeration
+- Auto-detection of cloud export type and JSON report output
 
 ---
 
@@ -38,7 +43,10 @@ Cloud Evidence Collector
 ## 🚀 Usage
 
 ```bash
-./OCloud
+./OCloud -g takeout.zip
+./OCloud -p ./photos/ -o report.json
+./OCloud --detect ./export/
+./OCloud --help
 ```
 
 ---
